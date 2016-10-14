@@ -1,0 +1,6 @@
+[client]
+database= 'smartso'
+USER = 'root'
+PASSWORD = ''
+HOST = 'localhost'
+PORT= ''
