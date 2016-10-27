@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My Apps:
     'polls',
+    # Third Party Apps:
+    'avatar',
+    'crispy_forms',
 
 ]
 
@@ -129,3 +132,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+#CrispyForms settings
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# AVATAR_PROVIDERS=(
+#     'avatar.providers.PrimaryAvatarProvider',
+#     'avatar.providers.GravatarAvatarProvider',
+#     'avatar.providers.DefaultAvatarProvider',
+# )
+# AVATAR_STORAGE_DIR = MEDIA_ROOT + '/avatars/'

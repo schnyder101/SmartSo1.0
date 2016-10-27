@@ -1,3 +1,8 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -7,3 +12,10 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+<!-- link to the change avatar
+    page:: -->
+<a href="{% url 'avatar_change' %}">Change your avatar</a>
+<a href="{% url 'avatar_delete' %}">Delete your avatar</a>
+<!-- display an avatar for a user -->
+{% load avatar_tags %}
+{% avatar user %}
